@@ -1,0 +1,224 @@
+/* Adicionando regras de fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --cor-primaria: #1E1E1E;
+    --cor-secundaria: #d1d1d1;
+    --cor-terciaria: #FF577F;
+    --cor-quartenaria: #ffffff;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Roboto', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-primaria);
+    outline: none;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    background: url("/assets/fundo4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 0%;
+
+}
+.cabecalho__menu{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+         
+}
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    gap: 16px;
+     
+}
+
+.container {
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-secundaria);
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto 0;
+}
+
+.entrada__tarefa {
+    font-family: var(--fonte-secundaria);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.botao__tarefa {
+    font-family: var(--fonte-primaria);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.botao__tarefa:hover {
+    opacity: 0.8;
+    background-color: var(--cor-hover);
+}
+
+.botao__tarefa:active {
+    opacity: 0.6;
+}
+
+.lista__tarefas {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: var(--cor-quartenaria);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+img {
+    height: 25px;
+    opacity: 100;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+    opacity: 1;
+}
+
+.done {
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
+   
+.rodape{
+
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 2px solid var(--cor-terciaria);
+    border-bottom: 2px solid var(--cor-terciaria);
+     color: var(--cor-secundaria);
+}
+
+.texto__rodape {
+    margin-bottom: 1.25rem;
+}
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:82px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quartenaria);
+    
+}
+.apresentacao__conteudo__titulo__destaque{
+    color: var(--cor-terciaria);
+}
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-quartenaria);
+}
+
+@media (max-width:1200px) {
+   
+    body {
+        background-image: none; 
+        background-color: var(--cor-primaria);
+    }
+    .cabecalho {
+        padding: 10%;      
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+        
+    .cabecalho__menu__link{
+        font-family: var(--fonte-secundaria);
+        font-size: 1 rem;
+        font-weight: 600;
+        color: var(--cor-terciaria);
+        text-decoration: none;        
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__projetos {
+        flex-direction: column;
+        padding: 5%;
+    }
+        .apresentacao__projetos__imagens{
+            flex-direction: column;
+            padding: 5%;
+                   
+    }
+        .apresentacao__conteudo{
+        width: auto;
+    }
+
+    .apresentacao__conteudo__projetos{
+        width: auto;
+        
+    }
+    
+    .apresentacao__imagem__projetos {
+        width: 80%;
+        margin-bottom: 20px;
+        }
+        .apresentacao__links__navegacao{
+           width: 50%;
+        }
+}
